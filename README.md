@@ -1,106 +1,224 @@
-<㈜오카스튜디오>('https://github.com/Oka-Studio'이하 '㈜오카스튜디오')은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.
+# The Cayman Blog theme
 
-<㈜오카스튜디오>('㈜오카스튜디오') 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.
+[![Build Status](https://travis-ci.org/lorepirri/cayman-blog.svg?branch=master)](https://travis-ci.org/lorepirri/cayman-blog) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman-blog.svg)](https://badge.fury.io/rb/jekyll-theme-cayman-blog)
 
-○ 본 방침은부터 2020년 11월 26일부터 시행됩니다.
+*Cayman Blog is a Jekyll theme for GitHub Pages. It is based on the nice [Cayman theme](https://pages-themes.github.io/cayman/), with blogging features added. You can [preview the theme to see what it looks like](http://lorepirri.github.io/cayman-blog), or even [use it today](#usage).*
 
+<img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail.png" alt="Thumbnail of cayman-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail-mobile.gif" alt="Thumbnail of cayman-blog for mobile" style="max-width:30%;"/>
 
-1. 개인정보의 처리 목적 <㈜오카스튜디오>('https://github.com/Oka-Studio'이하 '㈜오카스튜디오')은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.
+## Install
 
-가. 재화 또는 서비스 제공
+Cayman Blog Theme has been developed as a Jekyll theme gem for easier use. It is also 100% compatible with GitHub Pages — just with a more involved installation process according to whether you’re _running Jekyll v3.3+ and self-hosting_, or if you’re *hosting with GitHub Pages*.
 
-서비스 제공, 콘텐츠 제공 등을 목적으로 개인정보를 처리합니다.
+## Self hosting
 
+If you’re running Jekyll v3.3+ and **self-hosting** you can quickly install the theme as Ruby gem:
 
-나. 마케팅 및 광고에의 활용
+1. Add this line to your Jekyll site’s Gemfile:
 
-접속빈도 파악 또는 회원의 서비스 이용에 대한 통계 등을 목적으로 개인정보를 처리합니다.
+    ```
+    gem "jekyll-theme-cayman-blog"
+    ```
 
+2. Add this line to your Jekyll site’s _config.yml file:
 
-2. 개인정보 파일 현황
+    ```
+    theme: jekyll-theme-cayman-blog
+    ```
 
-1. 개인정보 파일명 : 개인정보처리방침
-개인정보 항목 : 성별, 신체정보, 서비스 이용 기록, 접속 로그
-수집방법 : 생성정보 수집 툴을 통한 수집
-보유근거 : 개인정보보호법제15조 (정보주체의 동의)
-보유기간 : 5년
-관련법령 :
+3. Then run Bundler to install the theme gem and dependencies:
 
+    ```
+    script/bootstrap
+    ```
 
-3. 개인정보의 처리 및 보유 기간
+## Hosting with GitHub Pages
 
-① <㈜오카스튜디오>('㈜오카스튜디오')은(는) 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집시에 동의 받은 개인정보 보유,이용기간 내에서 개인정보를 처리,보유합니다.
+If you’re *hosting your blog with GitHub Pages* you’ll have to consider this:
 
-② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.
+:warning: As stated in the official [Jekyll documentation](https://jekyllrb.com/docs/themes/#installing-a-theme):
 
-1.<제화 또는 서비스 제공>
-<제화 또는 서비스 제공>와 관련한 개인정보는 수집.이용에 관한 동의일로부터<3년>까지 위 이용목적을 위하여 보유.이용됩니다.
-보유근거 : 개인정보보호법제15조 (정보주체의 동의)
-관련법령 :
-예외사유 :
-4. 정보주체와 법정대리인의 권리·의무 및 그 행사방법 이용자는 개인정보주체로써 다음과 같은 권리를 행사할 수 있습니다.
+> If you’re publishing your Jekyll site on [GitHub Pages](https://pages.github.com/), note that GitHub Pages supports only some gem-based themes. See [Supported Themes](https://pages.github.com/themes/) in GitHub’s documentation to see which themes are supported.
 
-① 정보주체는 ㈜오카스튜디오에 대해 언제든지 개인정보 열람,정정,삭제,처리정지 요구 등의 권리를 행사할 수 있습니다.
+Therefore, this theme, as well as many others, can not be installed in the same way as the ones officially supported by GitHub Pages (e.g. Cayman, Minima), a bit more effort has to be put on.
 
-② 제1항에 따른 권리 행사는㈜오카스튜디오에 대해 개인정보 보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 ㈜오카스튜디오은(는) 이에 대해 지체 없이 조치하겠습니다.
+The easiest way I found to install _Cayman Blog Theme_, is [installing the theme gem](gem-install), and then [converting the gem-based theme to regular theme](https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes).
 
-③ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.
-
-④ 개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.
-
-⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
-
-⑥ ㈜오카스튜디오은(는) 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.
+Alternatively, for new projects, one could fork the whole theme, and keep only the interesting files.
 
 
+### Gem Install
 
-5. 처리하는 개인정보의 항목 작성
+This method is preferred for existing _Jekyll blogs_, as well as newly created ones. Notice that the files `index.md`, `about.md`, `contact.md` will be overwritten (only `index.md` is really needed, the other two are just placeholders).
 
-① <㈜오카스튜디오>('https://github.com/Oka-Studio'이하 '㈜오카스튜디오')은(는) 다음의 개인정보 항목을 처리하고 있습니다.
+1. Install the theme gem: ` $ gem install jekyll-theme-cayman-blog`
+3. Run `$ gem env gemdir` to know where the gem was installed
+4. Open the folder shown in the output
+5. Open the folder `gems`
+5. Open the theme folder (e.g. `jekyll-theme-cayman-blog-0.0.5`)
+6. Copy all the files into your newly created or existing blog folder    
+7. Leave empty `theme` your site's `_config.yml`:
 
-1<제화 또는 서비스 제공>
-필수항목 : 성별, 신체정보, 서비스 이용 기록, 접속 로그
-- 선택항목 :
+    ```yml
+    theme:
+    ```
+6. Modify `_config.yml`, `about.md`, `contact.md` for your project
+7. [Customize the theme](customizing)
+
+### Install as a Fork
+
+1. [Fork the repo](https://github.com/lorepirri/cayman-blog)
+2. Clone down the repo with `$ git clone git@github.com:username/reponame.git`
+3. Delete the `screenshot.png` and `screenshot-mobile.png` files
+3. Empty the `_posts` folder
+4. Install bundler and gems with `$ script/bootstrap`
+5. Run Jekyll with `$ bundle exec jekyll serve`
+6. Modify `_config.yml`, `about.md`, `contact.md`, and `now.md` for your project
+7. [Customize the theme](customizing)
+
+## Customizing
+
+### Configuration variables
+
+Cayman Blog will respect the following variables, if set in your site's `_config.yml`:
+
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
+```
+
+Additionally, you may choose to set the following optional variables:
+
+```yml
+show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
+```
+
+### RSS feeds
+
+To enable RSS feeds and also make visible an RSS feeds button in the footer, the [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) must be installed.
+
+Add this line to your site's Gemfile:
+
+```ruby
+gem 'jekyll-feed'
+```
+
+And then add this line to your site's `_config.yml`:
+
+```yml
+plugins:
+  - jekyll-feed
+```
+
+:warning: If you are using Jekyll < 3.5.0 use the `gems` key instead of `plugins`.
+
+For more information about configuring this plugin, see the official [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) page.
+
+### SEO tags
+
+Cayman Blog includes simple SEO tags from [jekyll-social-metatags](https://github.com/lorepirri/jekyll-social-metatags). Have a look at the page for its usage.
+
+The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
+
+To switch to a better SEO tags however, one should install [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag):
+
+1. Add this line to your site's Gemfile:
+
+    ```ruby
+    gem 'jekyll-seo-tag'
+    ```
+
+2. And then add this line to your site's `_config.yml`:
+
+    ```yml
+    plugins:
+      - jekyll-seo-tag
+    ```
+
+3. Replace with the following, the `<!-- jekyll-seo-tag -->` comment in your site's `default.html`:
+
+      ```liquid
+      {% seo %}
+      ```
+
+For more information about configuring this plugin, see the official [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) page.
 
 
-6. 개인정보의 파기<㈜오카스튜디오>('㈜오카스튜디오')은(는) 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다.
+### Stylesheet
 
--파기절차
-이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져(종이의 경우 별도의 서류) 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다. 이 때, DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 다른 목적으로 이용되지 않습니다.
+If you'd like to add your own custom styles:
 
--파기기한
-이용자의 개인정보는 개인정보의 보유기간이 경과된 경우에는 보유기간의 종료일로부터 5일 이내에, 개인정보의 처리 목적 달성, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보가 불필요하게 되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 5일 이내에 그 개인정보를 파기합니다.
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
 
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
 
+*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
 
-7. 개인정보 자동 수집 장치의 설치•운영 및 거부에 관한 사항
+### Layouts
 
-㈜오카스튜디오 은 정보주체의 이용정보를 저장하고 수시로 불러오는 ‘쿠키’를 사용하지 않습니다.
+If you'd like to change the theme's HTML layout:
 
-8. 개인정보 보호책임자 작성
+1. [Copy the original template](https://github.com/lorepirri/cayman-blog/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+2. Create a file called `/_layouts/default.html` in your site
+3. Paste the default layout content copied in the first step
+4. Customize the layout as you'd like
 
-① ㈜오카스튜디오(‘https://github.com/Oka-Studio’이하 ‘㈜오카스튜디오) 은(는) 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+### Sass variables
 
-▶ 개인정보 보호책임자
-성명 :박광근
-직책 :대표이사
-직급 :대표이사
-연락처 :010-5423-0764, pkknews@gmail.com,
-※ 개인정보 보호 담당부서로 연결됩니다.
+If you'd like to change the theme's [Sass variables](https://github.com/lorepirri/cayman-blog/blob/master/_sass/variables.scss), set new values before the `@import` line in your stylesheet:
 
-▶ 개인정보 보호 담당부서
-부서명 :
-담당자 :
-연락처 :, ,
-② 정보주체께서는 ㈜오카스튜디오(‘https://github.com/Oka-Studio’이하 ‘㈜오카스튜디오) 의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. ㈜오카스튜디오(‘https://github.com/Oka-Studio’이하 ‘㈜오카스튜디오) 은(는) 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.
+```scss
+$section-headings-color: #0086b3;
 
-9. 개인정보 처리방침 변경
+@import "{{ site.theme }}";
+```
 
-①이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.
+### Overriding GitHub-generated URLs
 
+Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
 
+1. Look at [the template source](https://github.com/lorepirri/cayman-blog/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
+2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
+    ```yml
+    github:
+      zip_url: http://example.com/download.zip
+      another_url: another value
+    ```
+3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
 
-10. 개인정보의 안전성 확보 조치 <㈜오카스튜디오>('㈜오카스튜디오')은(는) 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.
+*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
 
-1. 내부관리계획의 수립 및 시행
-개인정보의 안전한 처리를 위하여 내부관리계획을 수립하고 시행하고 있습니다.
+For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
+
+## Roadmap
+
+See the [open issues](https://github.com/lorepirri/cayman-blog/issues) for a list of proposed features (and known issues).
+
+## Project philosophy
+
+The Cayman Blog theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+
+## Contributing
+
+Interested in contributing to Cayman Blog? We'd love your help. Cayman Blog is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+
+### Previewing the theme locally
+
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
+
+1. Clone down the theme's repository (`git clone https://github.com/lorepirri/cayman-blog`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `bundle exec jekyll serve` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+
+### Running tests
+
+The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
